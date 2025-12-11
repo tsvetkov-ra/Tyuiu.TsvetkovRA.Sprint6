@@ -6,5 +6,6 @@ namespace Tyuiu.TsvetkovRA.Sprint6.Task0.V4
         {
             InitializeComponent();
         }
+
     }
 }
