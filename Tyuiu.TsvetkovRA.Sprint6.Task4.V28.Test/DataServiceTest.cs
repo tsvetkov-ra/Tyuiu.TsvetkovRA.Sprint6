@@ -1,13 +1,13 @@
 ﻿using Tyuiu.TsvetkovRA.Sprint6.Task4.V28.Lib;
-namespace Tyuiu.TsvetkovRA.Sprint6.Task4.V28
+namespace Tyuiu.TsvetkovRA.Sprint6.Task4.V28.Test
 {
     [TestClass]
-    public sealed class DataService
+    public sealed class DataServiceTest
     {
         [TestMethod]
         public void TestMethod1()
         {
-            DataServiceTest ds = new DataServiceTest();
+            DataService ds = new DataService();
 
             int startValue = -5;
             int stopValue = 5;
@@ -17,22 +17,21 @@ namespace Tyuiu.TsvetkovRA.Sprint6.Task4.V28
             double[] valueWaitArray;
             valueWaitArray = new double[len];
 
-            valueWaitArray[0] = -11.22;
+            valueWaitArray[0] = -11.223;
             valueWaitArray[1] = -8.65;
-            valueWaitArray[2] = -4.76;
-            valueWaitArray[3] = -6.47;
-            valueWaitArray[4] = -2.98;
-            valueWaitArray[5] = 1;
-            valueWaitArray[6] = 1.82;
-            valueWaitArray[7] = 3.55;
-            valueWaitArray[8] = 6.99;
-            valueWaitArray[9] = 7.74;
-            valueWaitArray[10] = 9.03;
+            valueWaitArray[2] = -4.758;
+            valueWaitArray[3] = -6.472;
+            valueWaitArray[4] = -2.977;
+            valueWaitArray[5] = 1.0;
+            valueWaitArray[6] = 1.824;
+            valueWaitArray[7] = 3.548;
+            valueWaitArray[8] = 6.986;
+            valueWaitArray[9] = 7.738;
+            valueWaitArray[10] = 9.033;
 
             double[] res;
             res = new double[len];
             res = ds.GetMassFunction(startValue, stopValue);
-
             CollectionAssert.AreEqual(valueWaitArray, res);
         }
     }

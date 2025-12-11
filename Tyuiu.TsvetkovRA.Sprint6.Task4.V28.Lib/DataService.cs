@@ -1,7 +1,7 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint6;
 namespace Tyuiu.TsvetkovRA.Sprint6.Task4.V28.Lib
 {
-    public class DataServiceTest : ISprint6Task4V28
+    public class DataService : ISprint6Task4V28
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
@@ -12,17 +12,9 @@ namespace Tyuiu.TsvetkovRA.Sprint6.Task4.V28.Lib
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (x + 2.5 == 0)
-                {
-                    y = 0;
-                }
-                else
-                {
-                    y = Math.Round((Math.Cos(2 * x) + ((Math.Sin(x)) / (x + 2.5)) + 2 * x), 2);
-                }
+                y = Math.Round((Math.Cos(2 * x) + Math.Sin(x) / (x + 2.5) + 2 * x), 3);
                 valueArray[count] = y;
                 count++;
-
             }
             return valueArray;
         }
